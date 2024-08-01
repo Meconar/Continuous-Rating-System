@@ -9,7 +9,8 @@ const data = {
         data: [],
         borderColor: 'rgba(75, 192, 192, 1)',
         borderWidth: 1,
-        fill: false
+        fill: false,
+        tension: 0 // Straight lines
     }]
 };
 
@@ -17,6 +18,9 @@ const config = {
     type: 'line',
     data: data,
     options: {
+        animation: {
+            duration: 0, // Disable all animations
+        },
         scales: {
             x: {
                 type: 'linear',
@@ -43,6 +47,12 @@ const ratingChart = new Chart(ctx, config);
 function updateRating(value) {
     rating = value;
     currentRatingElement.innerText = value;
+}
+
+function adjustRating(change) {
+    const newRating = Math.max(0, Math.min(100, rating + change));
+    updateRating(newRating);
+    ratingElement.value = newRating;
 }
 
 function addDataPoint() {
