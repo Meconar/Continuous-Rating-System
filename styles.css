@@ -5,18 +5,43 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
 }
 
 .container {
     text-align: center;
-    background: #fff;
+    background: #1e1e1e; /* Darker background */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 600px; /* Limit width for large screens */
 }
 
 input[type="range"] {
     width: 100%;
     margin: 20px 0;
+    accent-color: #bb86fc; /* Accent color for slider */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between buttons */
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #bb86fc; /* Accent color for buttons */
+    border: none;
+    border-radius: 5px;
+    color: #121212; /* Dark text color */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a066d6; /* Slightly darker on hover */
 }
