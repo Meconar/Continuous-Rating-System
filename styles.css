@@ -12,36 +12,52 @@ body {
 .container {
     text-align: center;
     background: #1e1e1e; /* Darker background */
-    padding: 20px;
+    padding: 20px; /* Padding around content */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 90%;
-    max-width: 600px; /* Limit width for large screens */
+    max-width: 600px; /* Limited width for better mobile fit */
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Column layout to stack elements */
+    align-items: center;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px; /* Space between header and graph */
+}
+
+.top-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; /* Space between buttons */
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%; /* Adjusted width for content */
+    height: 400px; /* Increased height of the graph area */
+    margin-top: 50px; /* Space from header */
 }
 
 input[type="range"] {
+    writing-mode: bt-lr; /* Rotate the slider for vertical orientation */
+    width: 20px;
+    height: 100%; /* Full height for the container */
+    margin-right: 30px; /* Increased space between slider and graph */
+    accent-color: #003d66; /* Dark blue for slider */
+}
+
+#ratingChart {
+    flex: 1;
+    height: 100%;
     width: 100%;
-    margin: 20px 0;
-    accent-color: #bb86fc; /* Accent color for slider */
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px; /* Space between buttons */
-}
-
-button {
-    margin: 5px;
-    padding: 10px;
-    background-color: #bb86fc; /* Accent color for buttons */
-    border: none;
-    border-radius: 5px;
-    color: #121212; /* Dark text color */
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #a066d6; /* Slightly darker on hover */
+    max-width: 500px; /* Constrained width to fit background */
 }
