@@ -9,20 +9,18 @@
 </head>
 <body>
     <div class="container">
-        <h1>Continuous Rating System</h1>
-        <div class="button-container">
-            <button onclick="adjustRating(-10)">[-10]</button>
-            <button onclick="adjustRating(-5)">[-5]</button>
-            <button onclick="adjustRating(-1)">[-1]</button>
-            <button onclick="adjustRating(1)">[+1]</button>
-            <button onclick="adjustRating(5)">[+5]</button>
-            <button onclick="adjustRating(10)">[+10]</button>
+        <div class="header">
+            <h1>Continuous Rating System</h1>
+            <div class="top-buttons">
+                <button onclick="downloadChartAsImage()">⤓</button> <!-- Updated Unicode for download -->
+                <button id="recordingButton" onclick="toggleRecording()">⏸</button> <!-- Unicode for pause -->
+            </div>
         </div>
-        <input type="range" id="rating" min="0" max="100" value="50" oninput="updateRating(this.value)">
-        <p>Current Rating: <span id="currentRating">50</span></p>
-        <canvas id="ratingChart"></canvas>
+        <div class="content">
+            <input type="range" id="rating" min="0" max="100" value="50" orient="vertical" oninput="updateRating(this.value)">
+            <canvas id="ratingChart"></canvas>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
-
