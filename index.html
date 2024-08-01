@@ -6,6 +6,7 @@
     <title>Continuous Rating System</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
     <div class="container">
@@ -18,7 +19,7 @@
         </div>
         <div class="content">
             <input type="range" id="rating" min="0" max="100" value="50" orient="vertical" oninput="updateRating(this.value)">
-            <canvas id="ratingChart"></canvas>
+            <canvas id="ratingChart" height="350"></canvas>
         </div>
     </div>
     <script src="script.js"></script>
