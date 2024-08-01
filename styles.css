@@ -43,20 +43,44 @@ body {
     flex-direction: row;
     align-items: center;
     width: 100%;
-    height: 500px; /* Increase height for the graph */
+    height: 400px; /* Height of the graph area */
+    max-width: 500px; /* Constrained width to fit background */
 }
 
 input[type="range"] {
     writing-mode: bt-lr; /* Rotate the slider for vertical orientation */
     width: 20px;
     height: 100%; /* Full height for the container */
-    margin: 0 45px 0 15px; /* Space between slider and chart */
+    margin: 0 15px; /* Space between slider and chart */
     accent-color: #003d66; /* Dark blue for slider */
 }
 
 #ratingChart {
     flex: 1;
-    height: 400px; /* Set the height for the graph */
-    width: 100%;
+    height: 100%; /* Full height of the container */
     max-width: 500px; /* Constrained width to fit background */
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+
+    .content {
+        flex-direction: column;
+        height: auto; /* Auto height for mobile */
+    }
+
+    input[type="range"] {
+        width: 100%;
+        height: 20px; /* Horizontal slider for mobile */
+        writing-mode: lr-tb; /* Rotate the slider back for horizontal orientation */
+        margin: 15px 0; /* Space between slider and chart */
+    }
+
+    #ratingChart {
+        width: 100%;
+        height: 300px; /* Adjust height for mobile */
+    }
 }
