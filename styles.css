@@ -42,22 +42,21 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 80%; /* Adjusted width for content */
-    height: 400px; /* Increased height of the graph area */
-    margin-top: 50px; /* Space from header */
+    width: 100%;
+    height: 500px; /* Increase height for the graph */
 }
 
 input[type="range"] {
     writing-mode: bt-lr; /* Rotate the slider for vertical orientation */
     width: 20px;
     height: 100%; /* Full height for the container */
-    margin-right: 30px; /* Increased space between slider and graph */
+    margin: 0 45px 0 15px; /* Space between slider and chart */
     accent-color: #003d66; /* Dark blue for slider */
 }
 
 #ratingChart {
     flex: 1;
-    height: 100%;
+    height: 400px; /* Set the height for the graph */
     width: 100%;
     max-width: 500px; /* Constrained width to fit background */
 }
