@@ -15,11 +15,11 @@ const data = {
         label: 'Rating',
         data: [],
         borderColor: '#66b3ff', // Light blue for the line
-        borderWidth: 1,
+        borderWidth: 3,
         fill: true, // Enable filling
         backgroundColor: 'rgba(102, 179, 255, 0.2)', // Light blue fill color
         pointRadius: 0,
-        tension: 0,
+        tension: 1,
         // Add shadow
         shadowColor: 'rgba(0, 0, 0, 0.2)', // Shadow color
         shadowBlur: 10, // Shadow blur effect
@@ -41,11 +41,17 @@ const config = {
                 position: 'bottom',
                 title: {
                     display: true,
-                    text: 'Time (s)'
+                    text: 'Time'
                 },
                 ticks: {
-                    callback: function(value) {
-                        return Math.round(value); // Round seconds to the nearest whole number
+                    callback: function(value, index, values) {
+                        if (value < 240) {
+                            return Math.round(value) + 's'; // Seconds
+                        } else if (value < 7200) {
+                            return Math.round(value / 60) + 'm'; // Minutes
+                        } else {
+                            return Math.round(value / 3600) + 'h'; // Hours
+                        }
                     }
                 }
             },
