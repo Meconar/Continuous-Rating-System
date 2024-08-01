@@ -73,10 +73,10 @@ input[type="range"] {
     }
 
     input[type="range"] {
-        width: 100%;
-        height: 20px; /* Horizontal slider for mobile */
         writing-mode: lr-tb; /* Rotate the slider back for horizontal orientation */
-        margin: 15px 0; /* Space between slider and chart */
+        width: 100%;
+        height: auto; /* Horizontal slider for mobile */
+        margin: 20px 0; /* Space between slider and chart */
     }
 
     #ratingChart {
