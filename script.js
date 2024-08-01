@@ -98,12 +98,8 @@ function addDataPoint() {
     }
 }
 
-// Update graph continuously using requestAnimationFrame
-function animate() {
-    addDataPoint();
-    requestAnimationFrame(animate);
-}
-animate();
+// Update graph continuously using setInterval
+setInterval(addDataPoint, fastUpdateInterval);
 
 // Download chart as image
 function downloadChartAsImage() {
