@@ -128,4 +128,3 @@ function toggleRecording() {
 ratingElement.addEventListener('input', () => {
     updateRating(ratingElement.value);
 });
-}
